@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { width } from '../utils';
 
 export default LocationItem = ({ title }) => {
   return (
@@ -11,12 +12,14 @@ export default LocationItem = ({ title }) => {
 
 const styles = StyleSheet.create({
   item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    width: width - 20,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    borderBottomColor: 'lightgray',
+    borderBottomWidth: 1,
   },
   title: {
-    fontSize: 32,
+    fontSize: 15,
+    fontWeight: 'bold',
   }
 })

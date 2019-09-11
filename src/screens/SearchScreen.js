@@ -18,10 +18,14 @@ class SearchScreen extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchRequest('paris')
+  }
+
   render() {
     return (
       <Fragment>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle='dark-content' />
         <SafeAreaView style={styles.container}>
           <SearchTextInput value={this.state.searchText} onChange={this.onChangeSearchText} />
           <SearchList locations={this.props.locations} />

@@ -1,19 +1,22 @@
 import React from 'react'
-import { View, TextInput, StyleSheet, Text } from 'react-native'
-import { width, height } from '../utils';
+import { View, TextInput, StyleSheet } from 'react-native'
+import { width } from '../utils';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default SearchTextInput = ({ value, onChange }) => {
   return (
     <View style={styles.textViewContainer}>
       <View style={styles.textViewSubContainer} >
-        {/* <Icon name="search" size={20} color="gray" /> */}
+        <View style={styles.searchImage}>
+          <Icon name='search' size={20} color='gray' />
+        </View>
+        <TextInput
+          placeholder={'Search place'}
+          style={styles.searchTextInput}
+          onChangeText={text => onChange(text)}
+          value={value}
+        />
       </View>
-      {/* <TextInput
-        style={styles.searchTextInput}
-        onChangeText={text => onChange(text)}
-        value={value}
-      /> */}
     </View>
   )
 }
@@ -21,27 +24,30 @@ export default SearchTextInput = ({ value, onChange }) => {
 const styles = StyleSheet.create({
   textViewContainer: {
     flexDirection: 'row',
-    height: 2 / 15 * height,
+    flex: 3,
     width: width,
-    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 10,
     paddingHorizontal: 20
   },
   textViewSubContainer: {
-    flex: 1,
+    height: 50,
+    width: width - 40,
     flexDirection: 'row',
     backgroundColor: 'lightgray',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 10,
+    borderRadius: 14,
   },
   searchImage: {
     flex: 1,
-    padding: 5
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   searchTextInput: {
+    height: 40,
     flex: 8,
-    backgroundColor: 'lightgray',
-    paddingHorizontal: 20,
-    borderRadius: 10
   }
 })
