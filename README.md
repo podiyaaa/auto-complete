@@ -11,9 +11,9 @@
 - Android studio with emiulator
 
 ### Installation - 
-- initially run through folowing codes (on macOS)
-`brew install yarn`  
+- initially run through folowing codes (on macOS)  
 `brew install node`  
+`brew install yarn`  
 `brew install watchman`  
 `brew tap AdoptOpenJDK/openjdk`  
 `brew cask install adoptopenjdk8`  
