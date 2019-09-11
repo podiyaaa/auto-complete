@@ -25,21 +25,21 @@ const styles = StyleSheet.create({
   textViewContainer: {
     flexDirection: 'row',
     flex: 3,
-    width: width,
+    width: '100%',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingVertical: 10,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   textViewSubContainer: {
     height: 50,
-    width: width - 40,
     flexDirection: 'row',
     backgroundColor: 'lightgray',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: 10,
     borderRadius: 14,
+    width: '90%'
   },
   searchImage: {
     flex: 1,
