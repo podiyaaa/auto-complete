@@ -12,11 +12,12 @@ export default LocationItem = ({ title }) => {
 
 const styles = StyleSheet.create({
   item: {
-    width: width - 20,
+    width: '90%',
     paddingHorizontal: 10,
     paddingVertical: 20,
     borderBottomColor: 'lightgray',
     borderBottomWidth: 1,
+    alignSelf: 'center',
   },
   title: {
     fontSize: 15,

@@ -7,7 +7,7 @@ export default SearchList = ({ locations }) => {
 
   noPlacesFound = () => {
     return (
-      <View style={styles.center}>
+      <View style={styles.noPlaceFound}>
         <Icon name='globe' size={100} color='gainsboro' />
         <Text style={styles.text}>No places found</Text>
       </View>
@@ -16,7 +16,7 @@ export default SearchList = ({ locations }) => {
 
   placesTable = () => {
     return (
-      <View>
+      <View style={styles.tableView}>
         <FlatList
           data={locations}
           renderItem={({ item }) => <LocationItem title={item.description} />}
@@ -27,16 +27,17 @@ export default SearchList = ({ locations }) => {
   }
 
   return (
-    <View style={[styles.tableViewContainer, styles.center]}>
+    <View style={styles.tableViewContainer}>
       {locations.length == 0 ? this.noPlacesFound() : this.placesTable()}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  center: {
+  noPlaceFound: {
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100%'
   },
   text: {
     color: 'gainsboro'
@@ -44,5 +45,10 @@ const styles = StyleSheet.create({
   tableViewContainer: {
     flex: 27,
     backgroundColor: 'white',
+    width: '100%',
+    height: '100%',
+  },
+  tableView: {
+    width: '100%',
   }
 })
