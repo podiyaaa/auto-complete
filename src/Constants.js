@@ -1,0 +1,4 @@
+// Search
+export const FETCH_LOCATIONS_ERROR = 'FETCH_LOCATIONS_ERROR'
+export const FETCHING = 'FETCHING'
+export const GOT_LOCATIONS = 'GOT_LOCATIONS'
