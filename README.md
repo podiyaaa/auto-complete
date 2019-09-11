@@ -10,20 +10,29 @@
 - Xcode
 - Android studio with emiulator
 
-### Installation - 
-- initially run through folowing codes (on macOS)  
+### Installation - macOS
+- initially run through folowing codes 
 `brew install node`  
 `brew install yarn`  
 `brew install watchman`  
 `brew tap AdoptOpenJDK/openjdk`  
 `brew cask install adoptopenjdk8`  
-- next install reac-native-cli
-`npm install -g react-native-cli`
+- next install react-native-cli
+`npm install -g react-native-cli`  
+
+### Installation - Windows
+- install java JDK - SET environment variables to PATH ( JAVA_HOME & ANDROID_HOME)
+- install node [Node Download](https://nodejs.org/en/download/ "Node Download")
+- install yarn [Yarn Download](https://yarnpkg.com/lang/en/docs/install/#windows-stable "Yarn Download")
+- next install react-native-cli
+`npm install -g react-native-cli` 
 
 ### Run application
-- open terminal and got to **auto-complete/** project directory.
+- open terminal and got to **auto-complete/** project directory.  
+- open **android/local.properties** and set Android Sdk path to **sdk.dir**  
 - run followings  
 `yarn` - this will install all node frameworks to your project node modules.  
+`react-native link` = this will link all asserts to both android and ios projects.    
 `yarn start -- --reset-cache` - this will start the react packager/server.  
 `react-native run-ios` - this will build application and run on ios simiulator.  
 `react-native run-android` - this will build application and run on android  emulator.  
