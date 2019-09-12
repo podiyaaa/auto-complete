@@ -1,13 +1,13 @@
 import React, { Fragment, Component } from 'react'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import {
   SafeAreaView,
   StyleSheet,
   StatusBar,
-} from 'react-native';
+} from 'react-native'
 import { getLocations } from '../actions/DispatchActions'
-import SearchTextInput from '../components/SearchTextInput';
-import SearchList from '../components/SearchList';
+import SearchTextInput from '../components/SearchTextInput'
+import SearchList from '../components/SearchList'
 
 class SearchScreen extends Component {
 

@@ -1,11 +1,12 @@
 import React from 'react'
-import { FlatList, StyleSheet, View, Text } from 'react-native'
-import LocationItem from '../components/LocationItem';
+import { FlatList, View, Text } from 'react-native'
+import LocationItem from '../LocationItem';
 import Icon from 'react-native-vector-icons/FontAwesome'
+import styles from './styles'
 
 export default SearchList = ({ locations }) => {
 
-  noPlacesFound = () => {
+  renderNoPlacesFound = () => {
     return (
       <View style={styles.noPlaceFound}>
         <Icon name='globe' size={100} color='gainsboro' />
@@ -14,7 +15,7 @@ export default SearchList = ({ locations }) => {
     )
   }
 
-  placesTable = () => {
+  renderPlacesTable = () => {
     return (
       <View style={styles.tableView}>
         <FlatList
@@ -28,27 +29,8 @@ export default SearchList = ({ locations }) => {
 
   return (
     <View style={styles.tableViewContainer}>
-      {locations.length == 0 ? this.noPlacesFound() : this.placesTable()}
+      {locations.length == 0 ? this.renderNoPlacesFound() : this.renderPlacesTable()}
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  noPlaceFound: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%'
-  },
-  text: {
-    color: 'gainsboro'
-  },
-  tableViewContainer: {
-    flex: 27,
-    backgroundColor: 'white',
-    width: '100%',
-    height: '100%',
-  },
-  tableView: {
-    width: '100%',
-  }
-})

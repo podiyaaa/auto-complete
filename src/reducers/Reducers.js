@@ -1,4 +1,4 @@
-import { FETCH_LOCATIONS_ERROR, FETCHING, GOT_LOCATIONS } from '../Constants';
+import { FETCH_LOCATIONS_ERROR, FETCHING, GOT_LOCATIONS } from '../Constants'
 
 const initialSearchState = {
   locations: [],
