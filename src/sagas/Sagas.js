@@ -1,6 +1,6 @@
 import { takeEvery, put, takeLatest, call } from 'redux-saga/effects'
-import { fetchLocations } from './apis/SearchAPI'
-import { GOT_LOCATIONS, FETCH_LOCATIONS_ERROR, GET_LOCATIONS } from './Constants'
+import { fetchLocations } from '../apis/SearchAPI'
+import { GOT_LOCATIONS, FETCH_LOCATIONS_ERROR, GET_LOCATIONS } from '../Constants'
 
 function* getLocations(action) {
   yield put({ type: 'FETCHING' })

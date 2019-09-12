@@ -1,4 +1,4 @@
-import { GET_LOCATIONS } from "../Constants";
+import { GET_LOCATIONS } from '../Constants'
 
 // SearchScreen
 export const getLocations = (value) => ({
